@@ -1,0 +1,708 @@
+/* ==================================================
+   RESET
+================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    margin: 0;
+
+    /*
+        The entire website is grey.
+
+        Recent Work therefore does NOT need
+        its own grey background.
+    */
+
+    background: #666;
+
+    color: white;
+
+    overflow-x: hidden;
+
+    font-family: "Underdog", sans-serif;
+}
+
+
+/* ==================================================
+   FONTS
+================================================== */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Henny Penny", cursive;
+    font-weight: normal;
+}
+
+
+/* ==================================================
+   HERO
+================================================== */
+
+.hero {
+    position: relative;
+
+    width: 100%;
+
+    /*
+        IMPORTANT
+
+        This is the exact aspect ratio of
+        home_page_background.svg.
+
+        1512 / 1185
+    */
+
+    aspect-ratio: 1512 / 1185;
+
+    overflow: hidden;
+
+    background: #666;
+}
+
+
+/* ==================================================
+   BACKGROUND ARTWORK
+================================================== */
+
+.background {
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    width: 100%;
+    height: 100%;
+
+    /*
+        Do NOT stretch the SVG.
+
+        The SVG and hero have the exact same
+        aspect ratio, so contain is safe.
+    */
+
+    object-fit: contain;
+
+    z-index: 1;
+
+    pointer-events: none;
+}
+
+
+/* ==================================================
+   WHITE TOP BANNER
+================================================== */
+
+.banner {
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    /*
+        Same width as the original artwork.
+
+        This keeps the 1513 × 248 proportions.
+    */
+
+    width: 100%;
+    height: auto;
+
+    z-index: 5;
+
+    pointer-events: none;
+}
+
+
+/* ==================================================
+   PLAYING CARDS
+================================================== */
+
+.cards {
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    /*
+        The card SVG is 1620 × 709.
+
+        We scale it relative to the same
+        overall artwork width.
+    */
+
+    width: 107.1429%;
+
+    height: auto;
+
+    /*
+        1620 / 1512 = 1.071429
+
+        This means its original proportions
+        are preserved.
+    */
+
+    z-index: 10;
+
+    pointer-events: none;
+}
+
+
+/* ==================================================
+   HERO TEXT
+================================================== */
+
+.hero-title {
+    position: absolute;
+
+    /*
+        These coordinates are deliberately
+        LOWER than before.
+
+        The old 7% put the name inside the
+        white banner.
+
+        The artwork needs the title below it.
+    */
+
+    left: 3.2%;
+
+    top: 14%;
+
+    width: 94%;
+
+    z-index: 30;
+
+    pointer-events: none;
+}
+
+
+/* ==================================================
+   NAME
+================================================== */
+
+.hero-title h1 {
+    font-family: "Henny Penny", cursive;
+
+    font-size: clamp(
+        42px,
+        5vw,
+        82px
+    );
+
+    line-height: 1;
+
+    font-weight: normal;
+
+    white-space: nowrap;
+
+    color: white;
+}
+
+
+/* ==================================================
+   MIDDLE TITLE
+================================================== */
+
+.title-middle {
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    /*
+        Position "Lvl Design" underneath
+        the name.
+    */
+
+    margin-top: 8%;
+
+    margin-left: 25%;
+}
+
+
+/* ==================================================
+   "&" DECORATION
+================================================== */
+
+.star-and {
+    position: absolute;
+
+    /*
+        Original SVG:
+        347 × 347
+    */
+
+    width: clamp(
+        90px,
+        12vw,
+        180px
+    );
+
+    height: auto;
+
+    left: -18%;
+
+    top: -40%;
+
+    z-index: -1;
+
+    pointer-events: none;
+}
+
+
+/* ==================================================
+   LVL DESIGN
+================================================== */
+
+.lvl-design {
+    font-family: "Henny Penny", cursive;
+
+    font-size: clamp(
+        38px,
+        4.5vw,
+        72px
+    );
+
+    line-height: 1;
+
+    white-space: nowrap;
+
+    color: white;
+}
+
+
+/* ==================================================
+   BALANCING
+================================================== */
+
+.hero-title h2 {
+    font-family: "Henny Penny", cursive;
+
+    font-size: clamp(
+        44px,
+        5.5vw,
+        85px
+    );
+
+    line-height: 1;
+
+    font-weight: normal;
+
+    /*
+        Move this underneath the middle title.
+    */
+
+    margin-left: 12%;
+
+    margin-top: 4%;
+
+    color: white;
+}
+
+
+/* ==================================================
+   RED STAR
+================================================== */
+
+.star-red {
+    position: absolute;
+
+    width: clamp(
+        65px,
+        8vw,
+        130px
+    );
+
+    height: auto;
+
+    left: 68%;
+
+    top: 42%;
+
+    z-index: 25;
+
+    pointer-events: none;
+}
+
+
+/* ==================================================
+   GREY STAR
+================================================== */
+
+.star-gray {
+    position: absolute;
+
+    width: clamp(
+        80px,
+        12vw,
+        180px
+    );
+
+    height: auto;
+
+    left: 24%;
+
+    top: 25%;
+
+    z-index: 20;
+
+    pointer-events: none;
+}
+
+
+/* ==================================================
+   GARLANDS
+================================================== */
+
+.garlands {
+    position: absolute;
+
+    /*
+        Original:
+        1545 × 654
+
+        Scale based on the 1512px artwork.
+    */
+
+    width: 102.1825%;
+
+    height: auto;
+
+    /*
+        Position it toward the lower part
+        of the artwork.
+    */
+
+    left: -1.09%;
+
+    bottom: 0;
+
+    z-index: 40;
+
+    pointer-events: none;
+}
+
+
+/* ==================================================
+   WHITE DIVIDER
+================================================== */
+
+.hero-line {
+    position: absolute;
+
+    left: 0;
+
+    bottom: 0;
+
+    width: 100%;
+
+    height: auto;
+
+    z-index: 50;
+
+    pointer-events: none;
+}
+
+
+/* ==================================================
+   RECENT WORK
+================================================== */
+
+.recent-work {
+    position: relative;
+
+    /*
+        NO background here.
+
+        The body supplies the grey.
+    */
+
+    background: transparent;
+
+    min-height: 650px;
+
+    padding:
+        35px
+        5vw
+        100px;
+
+    overflow: hidden;
+}
+
+
+/* ==================================================
+   RECENT WORK TITLE
+================================================== */
+
+.recent-work > h2 {
+    position: relative;
+
+    z-index: 5;
+
+    font-family: "Henny Penny", cursive;
+
+    font-size: clamp(
+        38px,
+        4.5vw,
+        70px
+    );
+
+    font-weight: normal;
+
+    color: #e00000;
+
+    margin-bottom: 35px;
+}
+
+
+/* ==================================================
+   PROJECT GRID
+================================================== */
+
+.work-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+
+    max-width: 1250px;
+
+    margin: 0 auto;
+}
+
+
+/* ==================================================
+   PROJECT ITEM
+================================================== */
+
+.work-item {
+    position: relative;
+
+    width: 100%;
+
+    aspect-ratio: 373 / 413;
+}
+
+
+/*PROJECT FRAME*/
+
+.work-item > img {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    z-index: 2;
+
+    pointer-events: none;
+}
+
+
+/*PROJECT CONTENT*/
+
+.work-content {
+    position: absolute;
+
+    left: 10%;
+    right: 10%;
+
+    top: 15%;
+    bottom: 15%;
+
+    z-index: 3;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+}
+
+
+/* ==================================================
+   PROJECT TITLE
+================================================== */
+
+.work-content h3 {
+    font-family: "Henny Penny", cursive;
+
+    font-size: 26px;
+
+    font-weight: normal;
+}
+
+
+/* ==================================================
+   PROJECT DESCRIPTION
+================================================== */
+
+.work-content p {
+    font-family: "Underdog", sans-serif;
+
+    margin-top: 8px;
+
+    font-size: 17px;
+}
+
+
+/* ==================================================
+   FOOTER
+================================================== */
+
+footer {
+    background: #111;
+
+    padding: 35px;
+
+    text-align: center;
+
+    color: #aaa;
+
+    font-family: "Underdog", sans-serif;
+}
+
+
+/* ==================================================
+   TABLET
+================================================== */
+
+@media (max-width: 1100px) {
+
+    .hero-title h1 {
+        font-size: clamp(
+            38px,
+            6vw,
+            70px
+        );
+    }
+
+
+    .lvl-design {
+        font-size: clamp(
+            34px,
+            5vw,
+            65px
+        );
+    }
+
+
+    .hero-title h2 {
+        font-size: clamp(
+            40px,
+            5.5vw,
+            70px
+        );
+    }
+
+}
+
+
+/* ==================================================
+   MOBILE
+================================================== */
+
+@media (max-width: 800px) {
+
+    .hero-title {
+        left: 20px;
+
+        top: 14%;
+
+        width: calc(100% - 40px);
+    }
+
+
+    .hero-title h1 {
+        font-size: clamp(
+            30px,
+            9vw,
+            55px
+        );
+    }
+
+
+    .title-middle {
+        margin-left: 20%;
+
+        margin-top: 10%;
+    }
+
+
+    .lvl-design {
+        font-size: clamp(
+            28px,
+            8vw,
+            50px
+        );
+    }
+
+
+    .hero-title h2 {
+        margin-left: 5%;
+
+        margin-top: 5%;
+
+        font-size: clamp(
+            35px,
+            9vw,
+            55px
+        );
+    }
+
+
+    .star-and {
+        width: 90px;
+    }
+
+
+    .star-gray {
+        width: 100px;
+    }
+
+
+    .star-red {
+        width: 70px;
+    }
+
+
+    .recent-work {
+        padding:
+            30px
+            20px
+            80px;
+    }
+
+
+    .work-grid {
+        grid-template-columns: 1fr;
+
+        max-width: 400px;
+
+        gap: 25px;
+    }
+
+}
