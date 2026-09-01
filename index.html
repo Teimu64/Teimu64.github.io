@@ -1,337 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
-    <!-- ==================================================
-         BASIC PAGE SETUP
-    =================================================== -->
-
     <meta charset="UTF-8">
-
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
-
-    <title>
-        Tim Unverzagt — Level Design & Balancing
-    </title>
-
-
-    <!-- ==================================================
-         GOOGLE FONTS
-    =================================================== -->
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-
-    <link
-        rel="preconnect"
-        href="https://fonts.gstatic.com"
-        crossorigin
-    >
-
-    <link
-        href="https://fonts.googleapis.com/css2?family=Henny+Penny&family=Underdog&display=swap"
-        rel="stylesheet"
-    >
-
-
-    <!-- ==================================================
-         STYLESHEET
-    =================================================== -->
-
-    <link
-        rel="stylesheet"
-        href="style.css"
-    >
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tim Unverzagt</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 
 <body>
 
-
-    <!-- ==================================================
-         HERO / HOME PAGE
-    =================================================== -->
+<div class="page">
 
     <section class="hero">
 
-
-        <!-- ==============================================
-             MAIN RED / BLACK BACKGROUND
-        =============================================== -->
-
         <img
+            class="hero-background"
             src="Images/HomePage/home_page_background.svg"
-            class="background"
             alt=""
         >
 
-
-        <!-- ==============================================
-             TOP WHITE BANNER
-        =============================================== -->
-
         <img
+            class="hero-banner"
             src="Images/HomePage/home_page_banner.svg"
-            class="banner"
             alt=""
         >
-
-
-        <!-- ==============================================
-             PLAYING CARDS
-        =============================================== -->
 
         <img
+            class="hero-cards"
             src="Images/HomePage/home_page_cards.svg"
-            class="cards"
             alt=""
         >
 
+        <div class="hero-content">
 
-        <!-- ==============================================
-             HERO TITLE
-        =============================================== -->
+            <h1>Tim Unverzagt</h1>
 
-        <div class="hero-title">
-
-
-            <!-- NAME -->
-
-            <h1>
-                Tim Unverzagt
-            </h1>
-
-
-            <!-- ==========================================
-                 "&" + LVL DESIGN
-            =========================================== -->
-
-            <div class="title-middle">
-
-
-                <!-- & DECORATION -->
-
+            <div class="level-design">
                 <img
-                    src="Images/HomePage/home_page_star_and.svg"
                     class="star-and"
+                    src="Images/HomePage/home_page_star_and.svg"
                     alt=""
                 >
 
+                <span>Level Design</span>
+            </div>
 
-                <!-- LEVEL DESIGN -->
+            <h2>Balancing</h2>
 
-                <span class="lvl-design">
-                    Lvl Design
-                </span>
+            <img
+                class="star-red"
+                src="Images/HomePage/home_page_star_red.svg"
+                alt=""
+            >
 
+            <img
+                class="star-gray"
+                src="Images/HomePage/home_page_star_gray.svg"
+                alt=""
+            >
+
+        </div>
+
+    </section>
+
+
+    <section class="recent-work">
+
+        <div class="garland-layer">
+
+            <img
+                class="hero-garlands"
+                src="Images/HomePage/home_page_garlands.svg"
+                alt=""
+            >
+
+        </div>
+
+        <h2>Recent Work</h2>
+
+        <div class="work-grid">
+
+            <div class="work-card">
+
+                <img
+                    src="Images/HomePage/home_page_frame.svg"
+                    alt=""
+                >
+
+                <div class="work-card-content">
+                    <h3>Project One</h3>
+                    <p>Description</p>
+                </div>
 
             </div>
 
 
-            <!-- ==========================================
-                 BALANCING
-            =========================================== -->
+            <div class="work-card">
 
-            <h2>
-                Balancing
-            </h2>
+                <img
+                    src="Images/HomePage/home_page_frame.svg"
+                    alt=""
+                >
 
+                <div class="work-card-content">
+                    <h3>Project Two</h3>
+                    <p>Description</p>
+                </div>
+
+            </div>
+
+
+            <div class="work-card">
+
+                <img
+                    src="Images/HomePage/home_page_frame.svg"
+                    alt=""
+                >
+
+                <div class="work-card-content">
+                    <h3>Project Three</h3>
+                    <p>Description</p>
+                </div>
+
+            </div>
 
         </div>
 
-
-        <!-- ==================================================
-             RED STAR
-        =================================================== -->
-
-        <img
-            src="Images/HomePage/home_page_star_red.svg"
-            class="star-red"
-            alt=""
-        >
-
-
-        <!-- ==================================================
-             GREY STAR
-        =================================================== -->
-
-        <img
-            src="Images/HomePage/home_page_star_gray.svg"
-            class="star-gray"
-            alt=""
-        >
-
-
-        <!-- ==================================================
-             GARLANDS
-        =================================================== -->
-
-        <img
-            src="Images/HomePage/home_page_garlands.svg"
-            class="garlands"
-            alt=""
-        >
-
-
-        <!-- ==================================================
-             WHITE DIVIDER LINE
-        =================================================== -->
-
-        <img
-            src="Images/HomePage/home_page_line.svg"
-            class="hero-line"
-            alt=""
-        >
-
-
     </section>
 
-
-
-    <!-- ==================================================
-         RECENT WORK
-    =================================================== -->
-
-    <section class="recent-work">
-
-
-        <!-- SECTION TITLE -->
-
-        <h2>
-            Recent work
-        </h2>
-
-
-        <!-- ==================================================
-             PROJECT GRID
-        =================================================== -->
-
-        <div class="work-grid">
-
-
-            <!-- ==========================================
-                 PROJECT ONE
-            =========================================== -->
-
-            <article class="work-item">
-
-
-                <!-- FRAME -->
-
-                <img
-                    src="Images/HomePage/home_page_frame.svg"
-                    alt=""
-                >
-
-
-                <!-- PROJECT INFORMATION -->
-
-                <div class="work-content">
-
-                    <h3>
-                        Project One
-                    </h3>
-
-                    <p>
-                        Level Design
-                    </p>
-
-                </div>
-
-
-            </article>
-
-
-
-            <!-- ==========================================
-                 PROJECT TWO
-            =========================================== -->
-
-            <article class="work-item">
-
-
-                <!-- FRAME -->
-
-                <img
-                    src="Images/HomePage/home_page_frame.svg"
-                    alt=""
-                >
-
-
-                <!-- PROJECT INFORMATION -->
-
-                <div class="work-content">
-
-                    <h3>
-                        Project Two
-                    </h3>
-
-                    <p>
-                        Balancing
-                    </p>
-
-                </div>
-
-
-            </article>
-
-
-
-            <!-- ==========================================
-                 PROJECT THREE
-            =========================================== -->
-
-            <article class="work-item">
-
-
-                <!-- FRAME -->
-
-                <img
-                    src="Images/HomePage/home_page_frame.svg"
-                    alt=""
-                >
-
-
-                <!-- PROJECT INFORMATION -->
-
-                <div class="work-content">
-
-                    <h3>
-                        Project Three
-                    </h3>
-
-                    <p>
-                        Level Design
-                    </p>
-
-                </div>
-
-
-            </article>
-
-
-        </div>
-
-
-    </section>
-
-
-
-    <!-- ==================================================
-         FOOTER
-    =================================================== -->
 
     <footer>
 
-        © 2026 Tim Unverzagt
+        <div class="bottom-decoration">
+
+            <img
+                class="hero-line"
+                src="Images/HomePage/home_page_line.svg"
+                alt=""
+            >
+
+            <img
+                class="hero-bottom-banner"
+                src="Images/HomePage/home_page_banner.svg"
+                alt=""
+            >
+
+        </div>
 
     </footer>
 
+</div>
 
 </body>
-
 </html>

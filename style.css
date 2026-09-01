@@ -1,6 +1,4 @@
-/* ==================================================
-   RESET
-================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Henny+Penny&family=Underdog&display=swap');
 
 * {
     margin: 0;
@@ -8,700 +6,367 @@
     box-sizing: border-box;
 }
 
-
 html {
     scroll-behavior: smooth;
 }
 
-
 body {
     margin: 0;
-
-    /*
-        The entire website is grey.
-
-        Recent Work therefore does NOT need
-        its own grey background.
-    */
-
-    background: #666;
-
     color: white;
-
     overflow-x: hidden;
-
     font-family: "Underdog", sans-serif;
+    background: #999999;
 }
 
-
-/* ==================================================
-   FONTS
-================================================== */
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-family: "Henny Penny", cursive;
-    font-weight: normal;
+.page {
+    position: relative;
+    width: 100%;
 }
-
-
-/* ==================================================
-   HERO
-================================================== */
 
 .hero {
     position: relative;
-
     width: 100%;
-
-    /*
-        IMPORTANT
-
-        This is the exact aspect ratio of
-        home_page_background.svg.
-
-        1512 / 1185
-    */
-
     aspect-ratio: 1512 / 1185;
-
     overflow: hidden;
-
-    background: #666;
-}
-
-
-/* ==================================================
-   BACKGROUND ARTWORK
-================================================== */
-
-.background {
-    position: absolute;
-
-    left: 0;
-    top: 0;
-
-    width: 100%;
-    height: 100%;
-
-    /*
-        Do NOT stretch the SVG.
-
-        The SVG and hero have the exact same
-        aspect ratio, so contain is safe.
-    */
-
-    object-fit: contain;
-
-    z-index: 1;
-
-    pointer-events: none;
-}
-
-
-/* ==================================================
-   WHITE TOP BANNER
-================================================== */
-
-.banner {
-    position: absolute;
-
-    left: 0;
-    top: 0;
-
-    /*
-        Same width as the original artwork.
-
-        This keeps the 1513 × 248 proportions.
-    */
-
-    width: 100%;
-    height: auto;
-
-    z-index: 5;
-
-    pointer-events: none;
-}
-
-
-/* ==================================================
-   PLAYING CARDS
-================================================== */
-
-.cards {
-    position: absolute;
-
-    left: 0;
-    top: 0;
-
-    /*
-        The card SVG is 1620 × 709.
-
-        We scale it relative to the same
-        overall artwork width.
-    */
-
-    width: 107.1429%;
-
-    height: auto;
-
-    /*
-        1620 / 1512 = 1.071429
-
-        This means its original proportions
-        are preserved.
-    */
-
     z-index: 10;
-
-    pointer-events: none;
 }
 
-
-/* ==================================================
-   HERO TEXT
-================================================== */
-
-.hero-title {
+.hero-background {
     position: absolute;
+    width: 100%;
+    height: auto;
+    left: 0;
+    top: -8%;
+    z-index: 1;
+}
 
-    /*
-        These coordinates are deliberately
-        LOWER than before.
-
-        The old 7% put the name inside the
-        white banner.
-
-        The artwork needs the title below it.
-    */
-
-    left: 3.2%;
-
-    top: 14%;
-
-    width: 94%;
-
-    z-index: 30;
-
+.hero-banner {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    left: 0;
+    top: -8%;
+    z-index: 5;
     pointer-events: none;
 }
 
+.hero-cards {
+    position: absolute;
+    width: 107.142857%;
+    height: auto;
+    left: -3.571428%;
+    top: 15%;
+    z-index: 10;
+    pointer-events: none;
+}
 
-/* ==================================================
-   NAME
-================================================== */
+.hero-content {
+    position: absolute;
+    inset: 0;
+    z-index: 30;
+    pointer-events: none;
+}
 
-.hero-title h1 {
+.hero-content h1 {
+    position: absolute;
+    left: 3.2%;
+    top: 17%;
     font-family: "Henny Penny", cursive;
-
-    font-size: clamp(
-        42px,
-        5vw,
-        82px
-    );
-
+    font-size: clamp(34px, 5vw, 82px);
     line-height: 1;
-
     font-weight: normal;
-
     white-space: nowrap;
-
     color: white;
 }
 
-
-/* ==================================================
-   MIDDLE TITLE
-================================================== */
-
-.title-middle {
-    position: relative;
-
+.level-design {
+    position: absolute;
+    left: 60%;
+    top: 35%;
     display: flex;
-
     align-items: center;
-
-    /*
-        Position "Lvl Design" underneath
-        the name.
-    */
-
-    margin-top: 8%;
-
-    margin-left: 25%;
+    width: max-content;
 }
-
-
-/* ==================================================
-   "&" DECORATION
-================================================== */
 
 .star-and {
     position: absolute;
-
-    /*
-        Original SVG:
-        347 × 347
-    */
-
-    width: clamp(
-        90px,
-        12vw,
-        180px
-    );
-
+    width: clamp(385px, 11vw, 3175px);
     height: auto;
-
-    left: -18%;
-
-    top: -40%;
-
+    left: -100%;
+    top: -45%;
     z-index: -1;
-
-    pointer-events: none;
 }
 
-
-/* ==================================================
-   LVL DESIGN
-================================================== */
-
-.lvl-design {
+.level-design span {
     font-family: "Henny Penny", cursive;
-
-    font-size: clamp(
-        38px,
-        4.5vw,
-        72px
-    );
-
+    font-size: clamp(32px, 4.3vw, 70px);
     line-height: 1;
-
     white-space: nowrap;
-
     color: white;
 }
 
-
-/* ==================================================
-   BALANCING
-================================================== */
-
-.hero-title h2 {
+.hero-content h2 {
+    position: absolute;
+    left: 15.5%;
+    top: 60%;
     font-family: "Henny Penny", cursive;
-
-    font-size: clamp(
-        44px,
-        5.5vw,
-        85px
-    );
-
+    font-size: clamp(36px, 5vw, 80px);
     line-height: 1;
-
     font-weight: normal;
-
-    /*
-        Move this underneath the middle title.
-    */
-
-    margin-left: 12%;
-
-    margin-top: 4%;
-
+    white-space: nowrap;
     color: white;
 }
-
-
-/* ==================================================
-   RED STAR
-================================================== */
 
 .star-red {
     position: absolute;
-
-    width: clamp(
-        65px,
-        8vw,
-        130px
-    );
-
+    width: clamp(55px, 7vw, 115px);
     height: auto;
-
-    left: 68%;
-
-    top: 42%;
-
+    left: 69%;
+    top: 59%;
     z-index: 25;
-
     pointer-events: none;
 }
-
-
-/* ==================================================
-   GREY STAR
-================================================== */
 
 .star-gray {
     position: absolute;
-
-    width: clamp(
-        80px,
-        12vw,
-        180px
-    );
-
+    width: clamp(75px, 10vw, 160px);
     height: auto;
-
-    left: 24%;
-
-    top: 25%;
-
-    z-index: 20;
-
+    left: 73%;
+    top: 47%;
+    z-index: 24;
     pointer-events: none;
 }
-
-
-/* ==================================================
-   GARLANDS
-================================================== */
-
-.garlands {
-    position: absolute;
-
-    /*
-        Original:
-        1545 × 654
-
-        Scale based on the 1512px artwork.
-    */
-
-    width: 102.1825%;
-
-    height: auto;
-
-    /*
-        Position it toward the lower part
-        of the artwork.
-    */
-
-    left: -1.09%;
-
-    bottom: 0;
-
-    z-index: 40;
-
-    pointer-events: none;
-}
-
-
-/* ==================================================
-   WHITE DIVIDER
-================================================== */
-
-.hero-line {
-    position: absolute;
-
-    left: 0;
-
-    bottom: 0;
-
-    width: 100%;
-
-    height: auto;
-
-    z-index: 50;
-
-    pointer-events: none;
-}
-
-
-/* ==================================================
-   RECENT WORK
-================================================== */
 
 .recent-work {
     position: relative;
-
-    /*
-        NO background here.
-
-        The body supplies the grey.
-    */
-
-    background: transparent;
-
+    width: 100%;
     min-height: 650px;
-
-    padding:
-        35px
-        5vw
-        100px;
-
-    overflow: hidden;
+    margin-top: -8%;
+    padding: 28px 5vw 90px;
+    background: transparent;
+    z-index: 1;
+    overflow: visible;
 }
 
+.recent-work::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -16%;
+    bottom: 0;
+    background: linear-gradient(
+        to bottom,
+        #303030 0%,
+        #555555 35%,
+        #777777 70%,
+        #999999 100%
+    );
+    z-index: 0;
+}
 
-/* ==================================================
-   RECENT WORK TITLE
-================================================== */
+.garland-layer {
+    position: absolute;
+    width: 100%;
+    height: 650px;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    pointer-events: none;
+    overflow: visible;
+}
+
+.hero-garlands {
+    position: absolute;
+    width: 103.5%;
+    height: auto;
+    left: -2%;
+    top: 0;
+    z-index: 1;
+    pointer-events: none;
+    transform: translateY(-200px);
+}
 
 .recent-work > h2 {
     position: relative;
-
-    z-index: 5;
-
+    z-index: 3;
+    margin: 0 0 28px;
     font-family: "Henny Penny", cursive;
-
-    font-size: clamp(
-        38px,
-        4.5vw,
-        70px
-    );
-
+    font-size: clamp(34px, 4.5vw, 68px);
+    line-height: 1;
     font-weight: normal;
-
     color: #e00000;
-
-    margin-bottom: 35px;
 }
 
-
-/* ==================================================
-   PROJECT GRID
-================================================== */
-
 .work-grid {
+    position: relative;
+    z-index: 3;
     display: grid;
-
-    grid-template-columns:
-        repeat(3, 1fr);
-
-    gap: 25px;
-
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
     max-width: 1250px;
-
     margin: 0 auto;
 }
 
-
-/* ==================================================
-   PROJECT ITEM
-================================================== */
-
-.work-item {
+.work-card {
     position: relative;
-
     width: 100%;
-
     aspect-ratio: 373 / 413;
 }
 
-
-/*PROJECT FRAME*/
-
-.work-item > img {
+.work-card > img {
     position: absolute;
-
-    inset: 0;
-
     width: 100%;
     height: 100%;
-
-    z-index: 2;
-
-    pointer-events: none;
+    left: 0;
+    top: 0;
+    object-fit: contain;
+    z-index: 1;
 }
 
-
-/*PROJECT CONTENT*/
-
-.work-content {
+.work-card-content {
     position: absolute;
-
-    left: 10%;
-    right: 10%;
-
-    top: 15%;
-    bottom: 15%;
-
-    z-index: 3;
-
+    inset: 20% 12%;
+    z-index: 2;
     display: flex;
-
     flex-direction: column;
-
     align-items: center;
-
     justify-content: center;
-
     text-align: center;
 }
 
-
-/* ==================================================
-   PROJECT TITLE
-================================================== */
-
-.work-content h3 {
-    font-family: "Henny Penny", cursive;
-
-    font-size: 26px;
-
-    font-weight: normal;
-}
-
-
-/* ==================================================
-   PROJECT DESCRIPTION
-================================================== */
-
-.work-content p {
+.work-card-content h3 {
     font-family: "Underdog", sans-serif;
-
-    margin-top: 8px;
-
-    font-size: 17px;
+    font-size: clamp(17px, 2vw, 25px);
+    font-weight: normal;
+    line-height: 1.2;
 }
 
-
-/* ==================================================
-   FOOTER
-================================================== */
+.work-card-content p {
+    margin-top: 7px;
+    font-family: "Underdog", sans-serif;
+    font-size: clamp(13px, 1.4vw, 18px);
+    line-height: 1.2;
+}
 
 footer {
-    background: #111;
-
-    padding: 35px;
-
-    text-align: center;
-
-    color: #aaa;
-
-    font-family: "Underdog", sans-serif;
+    position: relative;
+    width: 100%;
+    background: #999999;
+    padding: 0;
+    z-index: 10;
 }
 
+.bottom-decoration {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
-/* ==================================================
-   TABLET
-================================================== */
+.hero-line {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: auto;
+    z-index: 2;
+    margin-bottom: 20px;
+}
 
-@media (max-width: 1100px) {
+.hero-bottom-banner {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: auto;
+    z-index: 1;
+}
 
-    .hero-title h1 {
-        font-size: clamp(
-            38px,
-            6vw,
-            70px
-        );
+@media (max-width: 900px) {
+
+    .hero-content h1 {
+        left: 3%;
+        top: 9%;
     }
 
-
-    .lvl-design {
-        font-size: clamp(
-            34px,
-            5vw,
-            65px
-        );
+    .level-design {
+        left: 20%;
+        top: 35%;
     }
 
-
-    .hero-title h2 {
-        font-size: clamp(
-            40px,
-            5.5vw,
-            70px
-        );
+    .hero-content h2 {
+        left: 15%;
+        top: 60%;
     }
 
 }
 
+@media (max-width: 650px) {
 
-/* ==================================================
-   MOBILE
-================================================== */
-
-@media (max-width: 800px) {
-
-    .hero-title {
-        left: 20px;
-
-        top: 14%;
-
-        width: calc(100% - 40px);
+    .hero {
+        aspect-ratio: 1512 / 1185;
     }
 
-
-    .hero-title h1 {
-        font-size: clamp(
-            30px,
-            9vw,
-            55px
-        );
+    .hero-content h1 {
+        left: 3%;
+        top: 92%;
+        font-size: clamp(27px, 8vw, 45px);
     }
 
-
-    .title-middle {
-        margin-left: 20%;
-
-        margin-top: 10%;
+    .level-design {
+        left: 20%;
+        top: 35%;
     }
 
-
-    .lvl-design {
-        font-size: clamp(
-            28px,
-            8vw,
-            50px
-        );
+    .level-design span {
+        font-size: clamp(25px, 7vw, 42px);
     }
-
-
-    .hero-title h2 {
-        margin-left: 5%;
-
-        margin-top: 5%;
-
-        font-size: clamp(
-            35px,
-            9vw,
-            55px
-        );
-    }
-
 
     .star-and {
-        width: 90px;
+        width: 75px;
+        left: -40%;
+        top: -40%;
     }
 
-
-    .star-gray {
-        width: 100px;
+    .hero-content h2 {
+        left: 15%;
+        top: 60%;
+        font-size: clamp(28px, 8vw, 48px);
     }
-
 
     .star-red {
-        width: 70px;
+        width: 60px;
     }
 
+    .star-gray {
+        width: 85px;
+    }
 
     .recent-work {
-        padding:
-            30px
-            20px
-            80px;
+        margin-top: -8%;
+        padding: 25px 20px 70px;
     }
 
+    .recent-work::before {
+        top: -4%;
+    }
+
+    .garland-layer {
+        top: 0;
+        height: 500px;
+    }
+
+    .hero-garlands {
+        transform: translateY(-200px);
+    }
+
+    .recent-work > h2 {
+        font-size: clamp(30px, 9vw, 48px);
+    }
 
     .work-grid {
         grid-template-columns: 1fr;
-
-        max-width: 400px;
-
+        max-width: 380px;
         gap: 25px;
     }
 
