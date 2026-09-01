@@ -8,24 +8,29 @@
 
 html {
     scroll-behavior: smooth;
+    width: 100%;
+    overflow-x: clip;
 }
 
 body {
     margin: 0;
+    width: 100%;
+    min-width: 0;
     color: white;
-    overflow-x: hidden;
+    overflow-x: clip;
     font-family: "Underdog", sans-serif;
     background: #999999;
 }
 
 .page {
     position: relative;
-    width: 100%;
+    width: 100vw;
+    min-width: 0;
 }
 
 .hero {
     position: relative;
-    width: 100%;
+    width: 100vw;
     aspect-ratio: 1512 / 1185;
     overflow: hidden;
     z-index: 10;
@@ -33,7 +38,7 @@ body {
 
 .hero-background {
     position: absolute;
-    width: 100%;
+    width: 100vw;
     height: auto;
     left: 0;
     top: -8%;
@@ -42,7 +47,7 @@ body {
 
 .hero-banner {
     position: absolute;
-    width: 100%;
+    width: 100vw;
     height: auto;
     left: 0;
     top: -8%;
@@ -52,9 +57,9 @@ body {
 
 .hero-cards {
     position: absolute;
-    width: 107.142857%;
+    width: 107.142857vw;
     height: auto;
-    left: -3.571428%;
+    left: -3.571428vw;
     top: 15%;
     z-index: 10;
     pointer-events: none;
@@ -92,7 +97,7 @@ body {
     position: absolute;
     width: clamp(385px, 11vw, 3175px);
     height: auto;
-    left: -100%;
+    left: -150%;
     top: -45%;
     z-index: -1;
 }
@@ -139,7 +144,7 @@ body {
 
 .recent-work {
     position: relative;
-    width: 100%;
+    width: 100vw;
     min-height: 650px;
     margin-top: -8%;
     padding: 28px 5vw 90px;
@@ -153,6 +158,7 @@ body {
     position: absolute;
     left: 0;
     right: 0;
+    width: 100vw;
     top: -16%;
     bottom: 0;
     background: linear-gradient(
@@ -167,7 +173,7 @@ body {
 
 .garland-layer {
     position: absolute;
-    width: 100%;
+    width: 100vw;
     height: 650px;
     left: 0;
     top: 0;
@@ -178,9 +184,9 @@ body {
 
 .hero-garlands {
     position: absolute;
-    width: 103.5%;
+    width: 102.182524vw;
     height: auto;
-    left: -2%;
+    left: -1.091262vw;
     top: 0;
     z-index: 1;
     pointer-events: none;
@@ -204,6 +210,7 @@ body {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 24px;
+    width: 100%;
     max-width: 1250px;
     margin: 0 auto;
 }
@@ -251,7 +258,7 @@ body {
 
 footer {
     position: relative;
-    width: 100%;
+    width: 100vw;
     background: #999999;
     padding: 0;
     z-index: 10;
@@ -259,7 +266,7 @@ footer {
 
 .bottom-decoration {
     position: relative;
-    width: 100%;
+    width: 100vw;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -268,7 +275,7 @@ footer {
 .hero-line {
     display: block;
     position: relative;
-    width: 100%;
+    width: 100vw;
     height: auto;
     z-index: 2;
     margin-bottom: 20px;
@@ -277,7 +284,7 @@ footer {
 .hero-bottom-banner {
     display: block;
     position: relative;
-    width: 100%;
+    width: 100vw;
     height: auto;
     z-index: 1;
 }
