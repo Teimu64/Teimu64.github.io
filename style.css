@@ -22,6 +22,58 @@ body {
     background: #999999;
 }
 
+.banner-navigation {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    pointer-events: none;
+}
+
+.banner-navigation a {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: black;
+    font-family: "Underdog", sans-serif;
+    font-size: 2vw;
+    text-decoration: none;
+    white-space: nowrap;
+    pointer-events: auto;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.banner-navigation a:hover {
+    color: black;
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+.nav-home {
+	top: -10%;
+    left: 20%;
+}
+
+.nav-projects {
+	top: -10%;
+    left: 30%;
+}
+
+.nav-logo {
+	top: 10%;
+    left: 50%;
+}
+
+.nav-logo img {
+    display: block;
+    width: 6vw;
+    height: auto;
+}
+
+.nav-about {
+	top: -10%;
+    left: 76%;
+}
+
 .page {
     position: relative;
     width: 100vw;
