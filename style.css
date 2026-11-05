@@ -663,6 +663,37 @@ footer {
     font-weight: bold;
 }
 
+/* TBA for Project Page */
+
+.projects-page {
+    position: relative;
+    width: 100%;
+}
+
+.projects-placeholder {
+    position: relative;
+    width: 100%;
+    min-height: 65vw;
+    background-image: url("Images/ProjectPage/project_page_background.svg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.projects-under-construction {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    text-align: center;
+    color: white;
+    font-family: "Underdog", sans-serif;
+    font-size: clamp(20px, 3vw, 42px);
+    z-index: 4;
+}
+
 .linkedin-link {
     text-decoration: underline;
 }
